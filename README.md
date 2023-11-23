@@ -16,6 +16,7 @@
 
      
 - **Objective:** Validate the ability to log into the application and navigate to the 'Recruitment' section.
+
 - **Tasks:**
     1. Log into the website.
     2. Navigate to the 'Recruitment' tab located on the left side of the interface.
@@ -35,6 +36,7 @@
 - **Ease of Setup:** The automation suite should be straightforward to set up and execute.
 
 - **Clarity and Organization:** The structure and layout of the test suite should be logical, well-organized, and easy to understand.
+
 - **Element Identification Quality:** Element selectors used in the tests should be robust and readable, enhancing the stability and maintainability of the test suite.
 
 - **Assertion Quality:** Assertions should be meaningful, accurately assessing the functionality and quality of the application.
