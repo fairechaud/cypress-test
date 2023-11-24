@@ -7,11 +7,11 @@
 For context on usage, refer to the [requirements](./requirements.md) file.
 
 **Framework and Language Requirements:**
-    - *Selected Framework*: The automation test suite was developed using **Cypress.**
-    - *Programming Language:* The implementation utilizes **JavaScript.**
++ *Selected Framework*: The automation test suite was developed using **Cypress.**
++ *Programming Language:* The implementation utilizes **JavaScript.**
 
 **Target Application:**
-    - *Website URL:* https://opensource-demo.orangehrmlive.com/
++ *Website URL:* https://opensource-demo.orangehrmlive.com/
 
 
 ## Test Cases:

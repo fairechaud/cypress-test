@@ -10,7 +10,7 @@ The repo has a **package.json** file to handle dependencies and modules. Setting
 npm install 
 ~~~
 
-+ Cypress 13.6.0 should be installed in this step, if not already found.
++ Cypress v13.6.0 should be installed in this step.
 
 ## 2. Run the test suites
 
@@ -19,3 +19,15 @@ npm run test
 ~~~
 
 The custom command should handle all the Cypress initialization tasks and start the application, from there just select any spec file and run the tests.
+
+## Cypress project
+
+The test suite was designed as an 'E2E project'. It has already been configured, when prompted, select <code>E2E Testing</code> and afterwards, select your browser of choice and <code>Start E2E Testing</code>. I personally use Chrome as a default.
+
+<img src="./img/E2E.png">
+
+There's two spec files: 
++ login contains tests for login and 'Recruitment' page actions, as per [the login guidelines](./README.md#login-and-navigation-test)
++ page nav and api contains test for navigation and API testing, as per [the navigation guidelines](./README.md#inter-page-navigation-and-api-interaction-test)
+
+<img src="./img/specs.png">
