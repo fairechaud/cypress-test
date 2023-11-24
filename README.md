@@ -2,6 +2,12 @@
 
 **Objective:** This document outlines the requirements for an automation test suite designed to evaluate the functionality and quality of a specified web application.
 
+## IMPORTANT
+
+'''
+for context on usage, refer to requirements.md
+'''
+
 **Framework and Language Requirements:**
     - *Selected Framework*: The automation test suite was developed using **Cypress.**
     - *Programming Language:* The implementation utilizes **JavaScript.**
