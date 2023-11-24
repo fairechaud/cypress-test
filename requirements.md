@@ -22,7 +22,9 @@ The custom command should handle all the Cypress initialization tasks and start 
 
 ## Cypress project
 
-The test suite was designed as an 'E2E project'. It has already been configured, when prompted, select <code>E2E Testing</code> and afterwards, select your browser of choice and <code>Start E2E Testing</code>. I personally use Chrome as a default.
+The test suite was designed as an 'E2E project'. This approach was chosen because it closely resembles the context on which the tests take place = somewhere between System Testing and E2E testing, the code is already in production and we can validate real use cases, e.g testing features FROM the user's perspective.
+
+It has already been configured, when prompted, select <code>E2E Testing</code> and afterwards, select your browser of choice and <code>Start E2E Testing</code>. I personally use Chrome as a default.
 
 <img src="./img/E2E.png">
 
