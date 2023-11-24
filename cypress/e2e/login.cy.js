@@ -3,16 +3,13 @@ describe('Login/authentication page', () => {
   it('fails to log in a fake user', () => 
   {
     // same as cy.loginSuccess() but pass in fake credentials
+    cy.login('fakeUser')
   })
   
-  it.only('successfully takes demo user to dashboard', () => {
-    cy.loginSuccess()
+  it('successfully takes demo user to dashboard', () => {
+    cy.login()
     // assert that the dashboard page is shown, username shall
     // be in display on the dropdown menu
-  })
-
-  it('displays the user in dropdown', () => {
-    // would make for a good test if I can finish on time
   })
 })
 

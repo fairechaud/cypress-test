@@ -29,18 +29,19 @@ const URL = "https://opensource-demo.orangehrmlive.com/"
 const userInput =  "input[name=username]"
 const pwInput = "input[name=password]"
 
-Cypress.Commands.add('loginSuccess',(loginInfo = 'demoUser') =>
+Cypress.Commands.add('login',(loginInfo = 'demoUser') =>
 {
     cy.visit(URL)
-
-    cy.fixture(loginInfo).as('demoUserFixture')
-    cy.get('@demoUserFixture').then(user => {
+    // load credentials
+    cy.fixture(loginInfo).as('userFixture')
+    cy.get('@userFixture').then(user => {
         cy.get(userInput)
         .type(user.username)
         cy.get(pwInput)
         .type(user.password+'{enter}')
+        cy.url().should('include', user.page)
     })
-    cy.url().should('include', 'dashboard')
-    cy.get('p.oxd-userdropdown-name')
-    .should('contain', 'Anya Taylor')   
+    // if we had access to source we could try to figure out if the username is valid
+    // right now, the user's ifo is randomized every now and then
+    // verify cookies here
 })
