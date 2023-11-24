@@ -1,12 +1,15 @@
-describe('Login/authentication page', () => {
+const nonvalidLogin = "login"
+
+describe('The authentication page', () => {
   
   it('fails to log in a fake user', () => 
   {
     // same as cy.loginSuccess() but pass in fake credentials
-    cy.login('fakeUser')
+    cy.login('fakeUser',nonvalidLogin)
+    cy.url().should('include', nonvalidLogin)
   })
   
-  it('successfully takes demo user to dashboard', () => {
+  it('logs Admin to dashboard', () => {
     cy.login()
     // assert that the dashboard page is shown, username shall
     // be in display on the dropdown menu
@@ -16,9 +19,16 @@ describe('Login/authentication page', () => {
 // Figure out a way to access cookies and maintain login session open, 
 // otherwise, just execute one test after the other to save time.
 
-context('Access the recruitment section', () => {
-  it('verify stuff is displayed on screen', () => {
-
+context('The recruitment section', () => {
+  beforeEach(() => {
+    cy.login()
+  })
+  it('loads on screen', () => {
+    cy.get('a:contains("Recruitment")')
+      .first()
+      .click()
+    cy.get('h6')
+      .should("contain","Recruitment")
 
   })
 

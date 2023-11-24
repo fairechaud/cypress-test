@@ -29,7 +29,7 @@ const URL = "https://opensource-demo.orangehrmlive.com/"
 const userInput =  "input[name=username]"
 const pwInput = "input[name=password]"
 
-Cypress.Commands.add('login',(loginInfo = 'demoUser') =>
+Cypress.Commands.add('login',(loginInfo = 'demoUser', page = "dashboard") =>
 {
     cy.visit(URL)
     // load credentials
@@ -39,9 +39,9 @@ Cypress.Commands.add('login',(loginInfo = 'demoUser') =>
         .type(user.username)
         cy.get(pwInput)
         .type(user.password+'{enter}')
-        cy.url().should('include', user.page)
+        cy.url().should('include', page)
     })
-    // if we had access to source we could try to figure out if the username is valid
-    // right now, the user's ifo is randomized every now and then
-    // verify cookies here
+    // if we had access to source code we could try to figure out 
+    // if the username is valid right now, the user's ifo is 
+    //randomized every now and then verify cookies here
 })
