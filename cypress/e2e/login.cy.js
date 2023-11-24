@@ -29,7 +29,6 @@ context('The recruitment section', () => {
       .click()
     cy.get('h6')
       .should("contain","Recruitment")
-
   })
 
   it('verify buttons are functional', () => {
