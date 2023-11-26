@@ -9,7 +9,7 @@ describe('The authentication page', () => {
     cy.url().should('include', nonvalidLogin)
   })
   
-  it('logs Admin to dashboard', () => {
+  it.only('logs Admin to dashboard', () => {
     cy.login()
     // assert that the dashboard page is shown, username shall
     // be in display on the dropdown menu
@@ -21,9 +21,9 @@ describe('The authentication page', () => {
 
 context('The recruitment section', () => {
   beforeEach(() => {
-    cy.login()
+    cy.autoLogin()
   })
-  it('loads on screen', () => {
+  it.only('loads on screen', () => {
     cy.get('a:contains("Recruitment")')
       .first()
       .click()

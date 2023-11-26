@@ -45,3 +45,25 @@ Cypress.Commands.add('login',(loginInfo = 'demoUser', page = "dashboard") =>
     // if the username is valid right now, the user's ifo is 
     //randomized every now and then verify cookies here
 })
+
+Cypress.Commands.add('autoLogin',() =>
+{
+    
+    cy.request({
+        method: 'POST',
+        url: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/validate',
+        body: {
+            token: "myCustom-token",
+            username: "Admin",
+            password: "admin123"
+        }
+    }).then((response) => {
+        expect(response.status).to.equal(200)
+    })
+
+
+    
+    
+
+    
+})
