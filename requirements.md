@@ -1,6 +1,12 @@
-# Usage
+# Getting started
 
-This project was built using <code>npm v10.2.4</code> and <code>node v21.2.0</code>.
+## Environment
+
++ **npm**: v10.2.4
++ **node**: v21.2.0
++ **Cypress Version**: 13.6.0
++ **System Platform**: Linux Mint (21.2 Victoria MATE)
++ **Browser**: Google Chrome Version 119
 
 The repo has a **package.json** file to handle dependencies and modules. Setting up the project should be straight-forward, install all dependencies and run cypress:
 
@@ -10,7 +16,7 @@ The repo has a **package.json** file to handle dependencies and modules. Setting
 npm install 
 ~~~
 
-+ Cypress v13.6.0 should be installed in this step.
++ Cypress v13.6.0 should be installed in this step
 
 ## 2. Run the test suites
 
