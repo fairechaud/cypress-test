@@ -78,7 +78,7 @@ describe('The authentication page', () => {
 // Figure out a way to access cookies and maintain login session open, 
 // otherwise, just execute one test after the other to save time.
 
-context.only('The recruitment section', () => {
+describe('The recruitment section', () => {
   beforeEach(() => {
     cy.login()
     cy.get('a:contains("Recruitment")')
