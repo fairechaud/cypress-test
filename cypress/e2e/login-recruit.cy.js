@@ -89,8 +89,8 @@ context.only('The recruitment section', () => {
   it('loads on screen', () => {
     cy.get('h6').should("contain", "Recruitment")
   })
-  /*
-  it.only('deletes all vacancies', () => {
+  
+  it.skip('deletes all vacancies', () => {
     cy.get('a:contains("Vacancies")').
     first()
     .click()
@@ -107,7 +107,7 @@ context.only('The recruitment section', () => {
     cy.get("@records").should("contain", "0")
     
   })
-  */
+  
 
   it('adds and finds a candidate', () => {
     // click on add candidate
